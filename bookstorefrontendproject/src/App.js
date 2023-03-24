@@ -4,6 +4,7 @@ import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import BookStoreLogin from './Pages/BookStoreLogin/BookStoreLogin';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
+import ResetPassword from './Pages/ResetPassword/ResetPassword';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <Login /> */}
       {/* <SignUp /> */}
       {/* <BookStoreLogin /> */}
-      <ForgotPassword />
+      {/* <ForgotPassword /> */}
+      <ResetPassword />
     </div>
   );
 }
