@@ -16,9 +16,9 @@ function Login() {
         <>
             <div className="LoginMainContainer">
                 <div>
-                    <div style={{ display: 'flex', justifyContent: 'start', cursor: 'pointer', fontSize: '12px' }}>Email Id</div>
+                    <div style={{ display: 'flex', justifyContent: 'start', cursor: 'pointer', fontSize: '10px' }}>Email Id</div>
                     <TextField
-                        id="outlined-basic1"
+                        id="outlined-basic"
                         error={regexLogin.email_idError}
                         helperText={regexLogin.email_idHelperText}
                         className='InputGmail'
@@ -28,9 +28,9 @@ function Login() {
                     />
                 </div>
                 <div>
-                    <div style={{ display: 'flex', justifyContent: 'start', cursor: 'pointer', fontSize: '12px' }}>Password</div>
+                    <div style={{ display: 'flex', justifyContent: 'start', cursor: 'pointer', fontSize: '10px' }}>Password</div>
                     <TextField
-                        id="outlined-basic2"
+                        id="outlined-basic"
                         error={regexLogin.passwordsError}
                         helperText={regexLogin.passwordsHelperText}
                         className='InputPassword'
@@ -52,7 +52,7 @@ function Login() {
                     <Button size="small" variant="contained" style={{ textTransform: 'none', fontSize: '17px', marginRight: '0.5vw', width: '10vw', backgroundColor: '#4266B2' }}>
                         FaceBook
                     </Button>
-                    <Button size="small" variant="outlined" style={{ textTransform: 'none', fontSize: '17px', width: '10vw', backgroundColor: '#F5F5F5', borderColor: '#E4E4E4', color: '#0A0102' }}>
+                    <Button size="small" variant="contained" style={{ textTransform: 'none', fontSize: '17px', width: '10vw', backgroundColor: '#F5F5F5', borderColor: '#E4E4E4', color: '#0A0102' }}>
                         Google
                     </Button>
                 </div>
