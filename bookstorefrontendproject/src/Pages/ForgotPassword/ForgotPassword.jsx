@@ -3,6 +3,7 @@ import '../ForgotPassword/ForgotPassword.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
+const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 
 function ForgotPassword() {
     return (
