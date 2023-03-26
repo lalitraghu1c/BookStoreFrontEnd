@@ -8,6 +8,7 @@ import ResetPassword from './Components/ResetPassword/ResetPassword';
 import Router1 from './Router/Router1';
 import Header from './Components/Header/Header';
 import BookDesignCatalogue from './Components/BookDesignCatalogue/BookDesignCatalogue';
+import StartUp from './Components/StartUp/StartUp';
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
       {/* <BookStoreLogin /> */}
       {/* <ForgotPassword /> */}
       {/* <ResetPassword /> */}
-      {/* <Router1 /> */}
+      <Router1 />
       {/* <Header /> */}
-      <BookDesignCatalogue />
+      {/* <BookDesignCatalogue /> */}
+      {/* <StartUp /> */}
     </div>
   );
 }
