@@ -6,6 +6,7 @@ import BookStoreLogin from './Pages/BookStoreLogin/BookStoreLogin';
 import ForgotPassword from './Components/ForgotPassword/ForgotPassword';
 import ResetPassword from './Components/ResetPassword/ResetPassword';
 import Router1 from './Router/Router1';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <BookStoreLogin /> */}
       {/* <ForgotPassword /> */}
       {/* <ResetPassword /> */}
-      <Router1 />
+      {/* <Router1 /> */}
+      <Header />
     </div>
   );
 }

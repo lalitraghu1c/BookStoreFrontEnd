@@ -1,0 +1,56 @@
+.HeaderMainContainer {
+    width: 100vw;
+    height: 9vh;
+    background-color: #A03037;
+    display: flex;
+    align-items: center;
+}
+.HeaderBookStoreLogo {
+    position: relative;
+    left: 140px;
+}
+.HeaderText {
+    color: white;
+    font-size: 20px;
+    opacity: 1;
+    position: relative;
+    left: 145px;
+    top: -2px;
+}
+.input {
+    color: #5f6368;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.iconSearch{
+    position: relative;
+}
+.middleheader {
+    width: 39%;
+    height: 65%;
+    /* border: solid green;   */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: solid gray; */
+    border-radius: 2px;
+    background-color: white;
+    position: relative;
+    left: 200px;
+}
+.Profile{
+    position: relative;
+    left: 350px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.textProfile{
+    margin-top: -5px;    
+    font-size: 11px;
+    color: white;
+}
+.Cart{
+    position: relative;
+    left: 390px;
+    /* border: solid red; */
+}
