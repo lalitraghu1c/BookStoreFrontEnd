@@ -3,6 +3,7 @@ import './Login.css'
 import Button from '@mui/material/Button';
 import { TextField } from "@mui/material";
 import { LoginApi } from "../../Services/UserServices/UserService";
+import { useNavigate } from "react-router-dom";
 
 const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 const passwordRegex = /^(?=.*[A-Z,a-z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
@@ -60,6 +61,12 @@ function Login() {
         }
     }
 
+    let navigate = useNavigate()
+
+    const ForgotPassword =()=>{
+        navigate('/ForgetPassword')
+    }
+
     return (
         <>
             <div className="LoginMainContainer">
@@ -88,7 +95,7 @@ function Login() {
                         size='small'
                         style={{ width: '20vw' }}
                     />
-                    <div style={{ display: 'flex', justifyContent: 'end', cursor: 'pointer', fontSize: '12px', color: '#9D9D9D' }}>Forget Password?</div>
+                    <div onClick={ForgotPassword} style={{ display: 'flex', justifyContent: 'end', cursor: 'pointer', fontSize: '12px', color: '#9D9D9D' }}>Forget Password?</div>
                 </div>
                 <Button onClick={Submit} className="LoginButton" size="small" variant="contained" style={{ backgroundColor: '#A03037', textTransform: 'none', fontSize: '17px', marginTop: '15px' }}>
                     Login
