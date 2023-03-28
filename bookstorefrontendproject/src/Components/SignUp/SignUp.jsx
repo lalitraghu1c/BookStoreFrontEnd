@@ -4,7 +4,7 @@ import { SignUpApi } from '../../Services/UserServices/UserService';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
-const nameRegex = /^([A-Z]{1}[a-z,A-Z]{2,})$/;
+const nameRegex = /^([A-Z]{1}[a-z,A-Z]{2,} [A-Z]{1}[a-z,A-Z]{2,})$/;
 const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 const passwordRegex = /^(?=.*[A-Z,a-z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
 const mobileRegex = /^([0-9]*).{10}$/;

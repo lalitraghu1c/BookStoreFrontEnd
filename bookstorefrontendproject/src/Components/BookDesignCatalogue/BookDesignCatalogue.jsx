@@ -2,7 +2,7 @@ import React from 'react'
 import '../BookDesignCatalogue/BookDesignCatalogue.css'
 import BookImage from '../../Images/BookImage/1.jpeg'
 
-function BookDesignCatalogue() {
+function BookDesignCatalogue(props) {
     return (
         <>
             <div className="BookCatalogueMainContainer">
@@ -11,18 +11,18 @@ function BookDesignCatalogue() {
                 </div>
                 <div className="BookDetails">
                     <div className="BookTitle">
-                        Sanathan Dharma
+                        {props.book.bookName}
                     </div>
                     <div className="AuthorName">
-                        by Hindu
+                        {props.book.authorName}
                     </div>
                     <div className="BookRatingCount">
-                        <div className="BookRating">4.5</div>
-                        <div className="BookCount">(100)</div>
+                        <div className="BookRating">{props.book.rating}</div>
+                        <div className="BookCount">{props.book.bookCount}</div>
                     </div>
                     <div className='Price'>
-                        <div className="DiscountPrice">Rs. 250</div>
-                        <div className="OriginalPrice">Rs. 500</div>
+                        <div className="DiscountPrice">Rs. {props.book.discountPrice}</div>
+                        <div className="OriginalPrice">Rs. {props.book.originalPrice}</div>
                     </div>
                 </div>
             </div>

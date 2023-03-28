@@ -54,6 +54,8 @@ function Login() {
             LoginApi(Login)
                 .then(response => {
                     console.log(response)
+                    localStorage.setItem('token',response.data.data)
+                    navigate('/dashboard')
                 })
                 .catch(error => {
                     console.log(error)
@@ -64,7 +66,7 @@ function Login() {
     let navigate = useNavigate()
 
     const ForgotPassword =()=>{
-        navigate('/ForgetPassword')
+        navigate('/forgotpassword')
     }
 
     return (

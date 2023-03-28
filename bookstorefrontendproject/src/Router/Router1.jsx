@@ -1,8 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import SignUp from '../Components/SignUp/SignUp'
 import BookStoreLogin from '../Pages/BookStoreLogin/BookStoreLogin'
 import ForgotPassword from '../Components/ForgotPassword/ForgotPassword'
 import ResetPassword from '../Components/ResetPassword/ResetPassword'
+import Dashboard from '../Pages/Dashboard/Dashboard'
 import StartUp from '../Components/StartUp/StartUp'
 
 
@@ -12,9 +14,10 @@ function Router1() {
         <Router>
           <Routes>
               <Route path= '/' element ={<StartUp/>} />
-              <Route path='/BookStoreLogin' element={<BookStoreLogin />} />
-              <Route path='/ForgotPassword' element={<ForgotPassword />} />
-              <Route path='/ResetPassword' element={<ResetPassword />} />
+              <Route path='/bookstorelogin' element={<BookStoreLogin />} />
+              <Route path= '/dashboard' element ={<Dashboard/>} />
+              <Route path='/forgotpassword' element={<ForgotPassword />} />
+              <Route path='/resetpassword' element={<ResetPassword />} />
           </Routes>
         </Router>
       </div>

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
@@ -9,6 +8,7 @@ import Router1 from './Router/Router1';
 import Header from './Components/Header/Header';
 import BookDesignCatalogue from './Components/BookDesignCatalogue/BookDesignCatalogue';
 import StartUp from './Components/StartUp/StartUp';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
       {/* <Header /> */}
       {/* <BookDesignCatalogue /> */}
       {/* <StartUp /> */}
+      {/* <Dashboard /> */}
     </div>
   );
 }

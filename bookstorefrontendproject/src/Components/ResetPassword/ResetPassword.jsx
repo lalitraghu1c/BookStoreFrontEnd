@@ -6,7 +6,7 @@ import { ResetPasswordApi } from '../../Services/UserServices/UserService';
 const passwordRegex = /^(?=.*[A-Z,a-z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
 
 function ResetPassword() {
-    const [Reset, setReset] = useState({
+    const [ResetData, setResetData] = useState({
         New_Password: "",
         Confirm_Password: ""
     })
@@ -20,16 +20,16 @@ function ResetPassword() {
 
     const takeNewPassword = (event) => {
         console.log(event.target.value)
-        setReset(prevState => ({ ...prevState, New_Password: event.target.value }))
+        setResetData(prevState => ({ ...prevState, New_Password: event.target.value }))
     }
     const takeConfirmPassword = (event) => {
         console.log(event.target.value)
-        setReset(prevState => ({ ...prevState, Confirm_Password: event.target.value }))
+        setResetData(prevState => ({ ...prevState, Confirm_Password: event.target.value }))
     }
 
     const Submit = () => {
-        let passwordTest = passwordRegex.test(Reset.New_Password)
-        let confirmPasswordTest = passwordRegex.test(Reset.Confirm_Password)
+        let passwordTest = passwordRegex.test(ResetData.New_Password)
+        let confirmPasswordTest = passwordRegex.test(ResetData.Confirm_Password)
 
         if (passwordTest === false) {
             setRegexReset(prevState => ({ ...prevState, newPasswordBorder: true, newPasswordHelperText: 'Recheck the password' }))
@@ -46,7 +46,7 @@ function ResetPassword() {
         }
 
         if (passwordTest === true && confirmPasswordTest === true) {
-            ResetPasswordApi(Reset)
+            ResetPasswordApi(ResetData)
                 .then(response => {
                     console.log(response)
                 })

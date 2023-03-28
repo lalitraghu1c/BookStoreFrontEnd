@@ -10,7 +10,7 @@ function StartUp() {
     let navigate = useNavigate()
 
     const navToBookStoreLogin = () => {
-        navigate('/BookStoreLogin')
+        navigate('/bookstorelogin')
     }
 
     return (

@@ -16,7 +16,7 @@ function Header() {
                 <div className="HeaderText">
                     Bookstore
                 </div>
-                <div className="middleheader">
+                <div className="MiddleSecheader">
                     <div className='iconSearch'><Button> <SearchIcon style={{ color: '#5f6368' }} /> </Button></div>
                     <div className='input'><InputBase placeholder="Search ..." /></div>
                 </div>

@@ -38,15 +38,15 @@ function ForgotPassword() {
             setRegexForgot(prevState => ({ ...prevState, email_idBorder: false, email_idHelperText: '' }))
         }
         if (emailTest === true) {
-            ForgotPasswordApi(Password)
+            ForgotPasswordApi(Password.Email_Id)
                 .then(response => {
                     console.log(response)
                     localStorage.setItem('token', response.data.data)
+                    navigate('/resetpassword')
                 })
                 .catch(error => {
                     console.log(error)
                 })
-            navigate('/ResetPassword')
         }
     }
     const navigateToSignup = () =>{

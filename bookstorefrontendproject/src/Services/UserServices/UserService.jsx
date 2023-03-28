@@ -20,7 +20,8 @@ export const SignUpApi = (SignUpObj) => {
 
 export const ForgotPasswordApi = (ForgotObj) => {
     console.log("before")
-    const response = axios.post('https://localhost:44328/api/User/ForgotPassword',ForgotObj)
+    console.log(ForgotObj)
+    const response = axios.post(`https://localhost:44328/api/User/ForgotPassword?email=${ForgotObj}`)
     console.log("after")
     return response
 }

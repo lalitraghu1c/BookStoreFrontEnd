@@ -35,19 +35,21 @@
     text-align: left;
 }
 .BookRatingCount{
-    width: 25%;
+    width: 70%;
     height: 20%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     font-size: 15px;
+    /* border: solid black; */
 }
 .Price{
-    width: 50%;
+    width: 70%;
     height: 20%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    /* border: solid black; */
 }
 .DiscountPrice{
     width: 50%;
