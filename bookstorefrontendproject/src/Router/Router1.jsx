@@ -6,6 +6,7 @@ import ForgotPassword from '../Components/ForgotPassword/ForgotPassword'
 import ResetPassword from '../Components/ResetPassword/ResetPassword'
 import Dashboard from '../Pages/Dashboard/Dashboard'
 import StartUp from '../Components/StartUp/StartUp'
+import BookDetailCatalogue from '../Components/BookDetailCatalogue/BookDetailCatalogue'
 
 
 function Router1() {
@@ -18,6 +19,7 @@ function Router1() {
               <Route path= '/dashboard' element ={<Dashboard/>} />
               <Route path='/forgotpassword' element={<ForgotPassword />} />
               <Route path='/resetpassword' element={<ResetPassword />} />
+              <Route path= '/BookSummary' element ={<BookDetailCatalogue />} />
           </Routes>
         </Router>
       </div>

@@ -9,6 +9,7 @@ import Header from './Components/Header/Header';
 import BookDesignCatalogue from './Components/BookDesignCatalogue/BookDesignCatalogue';
 import StartUp from './Components/StartUp/StartUp';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import BookDetailCatalogue from './Components/BookDetailCatalogue/BookDetailCatalogue';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       {/* <BookDesignCatalogue /> */}
       {/* <StartUp /> */}
       {/* <Dashboard /> */}
+      {/* <BookDetailCatal  ogue /> */}
     </div>
   );
 }
