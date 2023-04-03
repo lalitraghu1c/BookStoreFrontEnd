@@ -11,7 +11,7 @@ function Header() {
         <>
             <div className="HeaderMainContainer">
                 <div className="HeaderBookStoreLogo">
-                <img style={{ width: '75px' }} src="https://img.freepik.com/premium-vector/reading-line-icon-bookstore-logo-open-book-book-sticker-logo-icon-vector-library-sign-education-educational-symbol-vector-isolated-background-eps-10_399089-1081.jpg?w=2000" alt="" />
+                <img style={{ width: '60px' }} src="https://img.freepik.com/premium-vector/reading-line-icon-bookstore-logo-open-book-book-sticker-logo-icon-vector-library-sign-education-educational-symbol-vector-isolated-background-eps-10_399089-1081.jpg?w=2000" alt="" />
                 </div>
                 <div className="HeaderText">
                     Bookstore

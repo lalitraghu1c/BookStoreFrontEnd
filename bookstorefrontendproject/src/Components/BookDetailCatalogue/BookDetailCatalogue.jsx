@@ -6,15 +6,46 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import StarIcon from '@mui/icons-material/Star';
-import { GetBookById } from "../../Services/DataServices/DataServices";
+import { AddToCart, AddToWishlistAPI, GetBookById } from "../../Services/DataServices/DataServices";
 import { useNavigate } from "react-router-dom";
 
 function BookDetailCatalogue() {
     const [value, setValue] = useState();
     const [bookDetail, setBookDetail] = useState([]);
     const book_Id = JSON.parse(localStorage.getItem("book_Id"));
-    console.log(bookDetail)
 
+    //Add to Cart
+    const cartobj = { "BookCount": 0, "book_Id": 0 }
+    let navigate1=useNavigate();
+    const cartlistener = () => {
+        cartobj.BookCount = 1
+        cartobj.book_Id = Number(localStorage.getItem("book_Id"))
+        AddToCart(cartobj)
+            .then((response) => {
+                console.log(response)
+                localStorage.setItem("CartId", response.data.data)
+                navigate1('/cart')
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        console.log("Add to cart successfully")
+    }
+
+    //Add to wishlist API
+    const wishListlistener = () => {
+        console.log(localStorage.getItem('book_Id'))
+        AddToWishlistAPI(localStorage.getItem('book_Id'))
+            .then((response) => {
+                console.log(response)
+                navigate('/wishlist')
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        console.log("Added to wishlist successfully")
+    }
+    //Get all book
     useEffect(() => {
         console.log(bookDetail)
         GetBookById(book_Id)
@@ -36,7 +67,7 @@ function BookDetailCatalogue() {
             <Header />
             <div className="Home2">
                 <div style={{ color: '#9D9D9D', cursor: 'pointer' }} className="home1" onClick={navtohome}>Home/</div>
-                <div className="Title2">Book(01)</div>
+                <div className="Title2">Book{bookDetail.bookId}</div>
             </div>
             <div className="BookMiddleContainer2">
                 <div className="BookImageContainer2">
@@ -44,15 +75,12 @@ function BookDetailCatalogue() {
                         <img style={{ width: '80%', height: '80%' }} src={bookDetail.bookImage} alt="" />
                     </div>
                     <div className="BookButton2">
-                        <Button
-                            className="AddToBag2" size="small" variant="contained" style={{ width: '48%', height: '90%', fontSize: '14px', backgroundColor: '#A03037', textTransform: 'none', borderRadius: '2px' }}>
+                        <Button onClick={cartlistener} className="AddToBag2" size="small" variant="contained"
+                            style={{ width: '48%', height: '90%', fontSize: '14px', backgroundColor: '#A03037', textTransform: 'none', borderRadius: '2px' }}>
                             ADD TO BAG
                         </Button>
-                        <Button
-                            className="AddToWishList2" size="small" variant="contained" style={{
-                                width: '48%', height: '90%', fontSize: '14px', backgroundColor: '#333333',
-                                textTransform: 'none', borderRadius: '2px'
-                            }}>
+                        <Button onClick={wishListlistener} className="AddToWishList2" size="small" variant="contained"
+                            style={{ width: '48%', height: '90%', fontSize: '14px', backgroundColor: '#333333', textTransform: 'none', borderRadius: '2px' }}>
                             <FavoriteIcon fontSize="small" style={{ marginRight: '10px' }} />
                             WishList
                         </Button>
@@ -69,7 +97,7 @@ function BookDetailCatalogue() {
                             <div className="Count2">({bookDetail.totalCountRating})</div>
                         </div>
                         <div className="Price2">
-                            <div style={{fontSize:'24px'}}className="DiscountPrice2-2">Rs. {bookDetail.discountPrice}</div>
+                            <div style={{ fontSize: '24px' }} className="DiscountPrice2-2">Rs. {bookDetail.discountPrice}</div>
                             <div className="OriginalPrice2-2">Rs. {bookDetail.originalPrice}</div>
                         </div>
                     </div>
@@ -85,7 +113,7 @@ function BookDetailCatalogue() {
                     <div className="BookDetail3-2">
                         <div className="Feedback2">Customer Feedback</div>
                         <div className="RatingCount2">
-                            <Typography style={{fontSize:'13px' , marginLeft: '10px', textAlign: 'start', marginTop: '20px' }} component="legend">Overall Rating</Typography>
+                            <Typography style={{ fontSize: '13px', marginLeft: '10px', textAlign: 'start', marginTop: '20px' }} component="legend">Overall Rating</Typography>
                             <Rating
                                 style={{ marginLeft: '12px', marginTop: '5px' }}
                                 name="simple-controlled"

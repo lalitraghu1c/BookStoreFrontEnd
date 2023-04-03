@@ -10,6 +10,8 @@ import BookDesignCatalogue from './Components/BookDesignCatalogue/BookDesignCata
 import StartUp from './Components/StartUp/StartUp';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import BookDetailCatalogue from './Components/BookDetailCatalogue/BookDetailCatalogue';
+import Cart from './Components/Cart/Cart';
+import WishList from './Components/Wishlist/Wishlist';
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
       {/* <BookDesignCatalogue /> */}
       {/* <StartUp /> */}
       {/* <Dashboard /> */}
-      {/* <BookDetailCatal  ogue /> */}
+      {/* <BookDetailCatalogue /> */}
+      {/* <Cart /> */}
+      {/* <WishList /> */}
     </div>
   );
 }
